@@ -1,0 +1,3 @@
+rootProject.name = 'Restaurants'
+
+includeFlat 'JPARestaurants'
