@@ -7,14 +7,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Restaurants</title>
+<jsp:include page="bootstrapHead.jsp" />
 </head>
 <body>
 
-	<h1>Home Page</h1>
-	
-	<c:forEach items="${restaurants}" var="rest">
-		<li>${rest.name}</li>
-	</c:forEach>
-	
+
+	<jsp:include page="navbar.jsp" />
+	<jsp:include page="imageSlider.jsp"/>
+	<jsp:include page ="welcome.jsp"/>
+	<jsp:include page = "threeColumns.jsp"/>
+	<jsp:include page="userCrud.jsp"/>
+	<jsp:include page="footer.jsp"/>
+	<main class="container-fluid">
+		
+		
+
+	</main>
+	<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>

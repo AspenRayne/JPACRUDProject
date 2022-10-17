@@ -23,7 +23,10 @@ DROP TABLE IF EXISTS `restaurant` ;
 CREATE TABLE IF NOT EXISTS `restaurant` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
-  `image_url` VARCHAR(2000) NULL,
+  `address` VARCHAR(200) NULL,
+  `rating` INT NULL,
+  `review` VARCHAR(2000) NULL,
+  `visited` TINYINT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -43,7 +46,9 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `restaurantdb`;
-INSERT INTO `restaurant` (`id`, `name`, `image_url`) VALUES (1, 'Yabby Hut', NULL);
+INSERT INTO `restaurant` (`id`, `name`, `address`, `rating`, `review`, `visited`) VALUES (1, 'Yabby Hut', '3355 S Yarrow St E-131, Lakewood, CO 80227', 5, 'Best seafood boil in Denver, not better than the ones I had in Texas though.', 1);
+INSERT INTO `restaurant` (`id`, `name`, `address`, `rating`, `review`, `visited`) VALUES (2, 'Gordon Ramsay Steak', '3655 S Las Vegas Blvd, Las Vegas, NV 89109', NULL, 'On my TODO list', 0);
+INSERT INTO `restaurant` (`id`, `name`, `address`, `rating`, `review`, `visited`) VALUES (3, 'The Capital Grille', '1450 Larimer St, Denver, CO 80202', 4, 'Too expensive for what it is', 1);
 
 COMMIT;
 

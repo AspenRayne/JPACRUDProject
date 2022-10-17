@@ -23,6 +23,10 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	implementation 'com.google.maps:google-maps-services:2.1.0'
+    
+    implementation 'com.google.appengine:appengine-api-1.0-sdk:2.0.8'
 }
 
 tasks.named('test') {

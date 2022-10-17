@@ -10,6 +10,12 @@ public interface RestaurantDAO {
 	
 	Restaurant findById(int id);
 	
+	List<Restaurant> findByAddress(String address);
+	
+	List<Restaurant> findByName(String name);
+	
+	List<Restaurant> findByVisited(Boolean visited);
+	
 	Restaurant create(Restaurant restaurant);
 	
 	Restaurant update(int id, Restaurant restaurant);
